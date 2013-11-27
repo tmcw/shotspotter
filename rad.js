@@ -56,6 +56,7 @@ function circadian() {
                 });
 
             g.select('.area')
+                .transition()
                 .attr('d', area);
         });
     }
