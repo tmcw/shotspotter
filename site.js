@@ -5,7 +5,7 @@ d3.json('exclude.json')
                 var excluded = true;
 
                 var exc = d3.select('body').append('button')
-                    .text('include NYE, New Years, and July 4th');
+                    .text('excluding NYE, New Years, and July 4th');
 
                 var div = d3.select('body').append('div')
                     .datum(exclude)
@@ -18,8 +18,8 @@ d3.json('exclude.json')
                     excluded = !excluded;
 
                     exc.text(excluded ?
-                        'exclude NYE, New Years, and July 4th' :
-                        'include NYE, New Years, and July 4th');
+                        'excluding NYE, New Years, and July 4th' :
+                        'including NYE, New Years, and July 4th');
 
                     div
                         .datum(excluded ? exclude : data)

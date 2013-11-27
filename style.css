@@ -30,3 +30,12 @@ text {
     font-family:monospace;
     fill:#fff;
 }
+
+button {
+    color:#eee;
+    background:#222;
+    width:100%;
+    border:0;
+    padding:5px;
+    font:inherit;
+}
