@@ -52,7 +52,7 @@ function circadian() {
                 .attr('text-anchor', 'middle')
                 .text(function(d) {
                     return d === 0 ?
-                        '12pm' : (d > 12 ? (d - 12) + 'pm' : d + 'am');
+                        '12am' : (d > 12 ? (d - 12) + 'pm' : d + 'am');
                 });
 
             g.select('.area')
