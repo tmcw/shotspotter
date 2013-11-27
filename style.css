@@ -1,0 +1,32 @@
+body {
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    background:#000;
+}
+
+p {
+    padding:20px;
+    text-align:center;
+    margin:0;
+    color:#666;
+}
+
+p a {
+    color:#e43;
+}
+
+path {
+    fill:#e43;
+}
+
+.hour path {
+    stroke-width:1;
+    stroke:#fff;
+    stroke-opacity:0.2;
+}
+
+text {
+    font-family:monospace;
+    fill:#fff;
+}
