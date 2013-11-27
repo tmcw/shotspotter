@@ -13,12 +13,15 @@ function circadian() {
 
     function chart(selection) {
         selection.each(function(data) {
+
             var svg = d3.select(this).selectAll('svg')
                 .data([data]);
+
             var gEnter = svg.enter().append('svg')
                 .style('height', height + 'px')
                 .style('width', width + 'px')
                 .append('g');
+
             gEnter.append('path').attr('class', 'area');
             y.domain(d3.extent(data, yValue));
 
