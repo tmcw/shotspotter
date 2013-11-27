@@ -13,7 +13,7 @@ rows.forEach(function(r) {
     if (exclude &&
         ((d.getDate() === 4 && d.getMonth() === 6) ||
         (d.getDate() === 1 && d.getMonth() === 0) ||
-        (d.getDate() === 11 && d.getMonth() === 31))
+        (d.getDate() === 31 && d.getMonth() === 11))
        ) return;
     incr.incr(mins);
 });
