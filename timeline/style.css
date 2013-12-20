@@ -1,10 +1,15 @@
 body {
-    margin:0;
+    margin:0 auto;
     padding:0;
     overflow-x:hidden;
-    background:#fff;
+    background:#eee;
     color:#225;
+    width:960px;
     font:normal 12px/20px 'Helvetica Neue', sans-serif;
+}
+
+rect.bg {
+    fill:#fff;
 }
 
 p {
@@ -13,8 +18,19 @@ p {
     margin:0;
 }
 
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
 form {
     text-align:center;
+}
+
+.shot {
+    fill:red;
 }
 
 p a {
@@ -22,7 +38,7 @@ p a {
 }
 
 path {
-    fill:#aaf;
+    fill:#111;
 }
 
 .hour path {
