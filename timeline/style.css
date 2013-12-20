@@ -30,7 +30,7 @@ form {
 }
 
 .shot {
-    fill:red;
+    fill:black;
 }
 
 p a {
@@ -38,7 +38,7 @@ p a {
 }
 
 path {
-    fill:#111;
+    fill:#aaa;
 }
 
 .hour path {
@@ -48,6 +48,5 @@ path {
 }
 
 text {
-    font-family:monospace;
     fill:#222;
 }

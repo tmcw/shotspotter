@@ -35,13 +35,13 @@ var areaDusk = d3.svg.area()
 
 function areaX(d) { return x(d.date); }
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#viz").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-svg.append('rect')
+var bg = svg.append('rect')
     .attr('class', 'bg')
     .attr('width', width)
     .attr('height', height);
@@ -66,6 +66,14 @@ d3.json('events.json').on('load', function(data) {
         .attr("class", "area")
         .attr("d", areaDawn);
 
+    var dateFormat = d3.time.format("%d %B %Y");
+
+    svg.on("mousemove", function() {
+        var date = x.invert(d3.mouse(bg.node())[0]);
+        d3.select('#when')
+            .text(dateFormat(date));
+        });
+
     svg.append("path")
         .datum(times)
         .attr("class", "area")
@@ -85,12 +93,12 @@ d3.json('events.json').on('load', function(data) {
       .data(data)
       .enter()
       .append('rect')
-      .attr("width", 1.5)
-      .attr("height", 1.5)
+      .attr("width", 2)
+      .attr("height", 2)
       .classed('shot', true)
       .attr("transform", function(d) {
           return 'translate(' + [
-              ~~x(d),
-              ~~y((d.getHours() * 60) + d.getMinutes())] + ')';
+              ~~x(d) - 1,
+              ~~y((d.getHours() * 60) + d.getMinutes()) - 1] + ')';
       });
 }).get();
