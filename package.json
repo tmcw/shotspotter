@@ -9,7 +9,7 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "dsv": "0.0.3",
+    "dsv": "0.0.5",
     "incr-object": "0.0.0"
   }
 }
